@@ -21,18 +21,33 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Column(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                   "assets/img/flutter.png",
-                  width: 100,
-                  height: 100,
+                  width: 50,
+                  height: 50,
                 ),
-                Container(
-                  child: Text("Flutter Is Awesome", style: TextStyle(fontSize: 28, color: Colors.yellow),),
-                ),
-                Container(
-                  child: Text("Flutter is Cross-Platform UI Framework", style: TextStyle(fontSize: 10, color: Colors.yellow),),
+                Column(
+                  children: [
+                    Container(
+                      child: Text(
+                        "Flutter Is Awesome",
+                        style: TextStyle(fontSize: 28, color: Colors.yellow),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 20),
+                      child: Text(
+                        "Flutter is Cross-Platform UI Framework",
+                        style: TextStyle(fontSize: 15, color: Colors.yellow),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
